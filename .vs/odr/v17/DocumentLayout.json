@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\Csharp\\odr\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|D:\\Projects\\Csharp\\odr\\pages\\pageadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|D:\\Projects\\Csharp\\odr\\pages\\pageadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\classes\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:classes\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\classes\\model1.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:classes\\model1.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Model1.tt",
+              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Classes\\Model1.tt",
+              "RelativeDocumentMoniker": "Classes\\Model1.tt",
+              "ToolTip": "D:\\Projects\\Csharp\\odr\\Classes\\Model1.tt",
+              "RelativeToolTip": "Classes\\Model1.tt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-11-20T12:03:03.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Classes\\Model1.edmx",
+              "RelativeDocumentMoniker": "Classes\\Model1.edmx",
+              "ToolTip": "D:\\Projects\\Csharp\\odr\\Classes\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "Classes\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-11-20T11:04:37.605Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PageAdmin.xaml",
+              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdmin.xaml",
+              "RelativeDocumentMoniker": "Pages\\PageAdmin.xaml",
+              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdmin.xaml",
+              "RelativeToolTip": "Pages\\PageAdmin.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-14T13:09:50.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PageAdmin.xaml.cs",
+              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdmin.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\PageAdmin.xaml.cs",
+              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdmin.xaml.cs",
+              "RelativeToolTip": "Pages\\PageAdmin.xaml.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAuwFYAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T13:07:09.724Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

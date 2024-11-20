@@ -1,0 +1,24 @@
+﻿<Window x:Class="odr.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:odr"
+        mc:Ignorable="d"
+        Title="Одежда для ручек" Height="550" Width="560">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#B3F4E9"/>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Image Source="/Одежда для ручек.png" HorizontalAlignment="Left"
+               Margin="5" Width="64" Height="64"/>
+            <TextBlock Text="{Binding ElementName=frmMain, Path=Content.Title}" 
+                       VerticalAlignment="Center" 
+                       FontFamily="Inter" FontSize="34" Margin="5"/>
+        </StackPanel>
+        <Frame Grid.Row="1" Name="frmMain" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
