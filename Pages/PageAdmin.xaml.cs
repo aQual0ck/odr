@@ -23,6 +23,7 @@ namespace odr.Pages
     /// </summary>
     public partial class PageAdmin : Page
     {
+        private List<MaterialType> _type;
         public PageAdmin()
         {
             InitializeComponent();
@@ -30,6 +31,27 @@ namespace odr.Pages
             for (int i = 1; i <= DBModel.entObj.Material.Count(); i++)
             {
                 CreateStackPanel(i);
+            }
+
+            cmbFilter.SelectedValuePath = "Title";
+            cmbFilter.DisplayMemberPath = "Title";
+            _type = Classes.DBModel.entObj.MaterialType.ToList();
+            MaterialType def = new MaterialType 
+            { 
+                ID = 0, 
+                Title = "Фильтрация", 
+                DefectedPercent = 0 
+            };
+            _type.Insert(0, def);
+            cmbFilter.ItemsSource = _type;
+            cmbFilter.SelectedIndex = 0;
+            
+            if (string.IsNullOrEmpty(txbSearch.Text))
+            {
+                txbSearch.Text = "Введите для поиска";
+                txbSearch.Foreground = Brushes.Gray;
+                txbSearch.GotFocus += RemoveTextSearch;
+                txbSearch.LostFocus += AddTextSearch;
             }
             //DGMaterials.Items.Clear();
             //DGMaterials.ItemsSource = Classes.DBModel.entObj.Material.ToList();
@@ -66,6 +88,7 @@ namespace odr.Pages
             StackPanel sp = new StackPanel
             {
                 Height = 100,
+                Width = 510,
                 VerticalAlignment = VerticalAlignment.Center,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Orientation = Orientation.Horizontal,
@@ -73,14 +96,22 @@ namespace odr.Pages
             StackPanel sub_sp = new StackPanel
             {
                 Height = 75,
+                Width = 355,
                 VerticalAlignment = VerticalAlignment.Center,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Orientation = Orientation.Vertical,
                 Margin = new Thickness(25, 0, 0, 0)
             };
+            StackPanel sub_sub_sp = new StackPanel
+            {
+                Height = 75,
+                Width = 100,
+                VerticalAlignment = VerticalAlignment.Center,
+                HorizontalAlignment = HorizontalAlignment.Left,
+            };
             Image image = new Image
             {
-                Source = (ImageSource)new ImageSourceConverter().ConvertFromString($"{Directory.GetParent(Environment.CurrentDirectory).Parent.FullName}\\materials\\picture.png"),
+                Source = (ImageSource)new ImageSourceConverter().ConvertFromString($"{Directory.GetParent(Environment.CurrentDirectory).Parent.FullName}\\{TypeDescriptor.GetProperties(item)["Image"].GetValue(item)}"),
                 Width = 60,
                 Height = 45, 
                 VerticalAlignment = VerticalAlignment.Center,
@@ -92,12 +123,12 @@ namespace odr.Pages
             };
             TextBlock tb_min = new TextBlock
             {
-                Text = $"Минимальное количество: {TypeDescriptor.GetProperties(item)["MinCount"].GetValue(item)} шт"
+                Text = $"Минимальное количество: {TypeDescriptor.GetProperties(item)["MinCount"].GetValue(item)} {TypeDescriptor.GetProperties(item)["Unit"].GetValue(item)}"
             };
 
             TextBlock tb_Suppliers = new TextBlock
             {
-                Text = $"Поставщики: "
+                Text = $"Поставщики: ",
             };
 
             for (int i = 1; i <= item.Supplier.Count(); i++)
@@ -106,18 +137,61 @@ namespace odr.Pages
                 {
                     tb_Suppliers.Text += $" {DBModel.entObj.Supplier.FirstOrDefault(x => x.ID == i).Title}";
                 }
+                else if (i % 3 == 0)
+                {
+                    tb_Suppliers.Text += $" {DBModel.entObj.Supplier.FirstOrDefault(x => x.ID == i).Title},\n";
+                }
                 else
                 {
                     tb_Suppliers.Text += $" {DBModel.entObj.Supplier.FirstOrDefault(x => x.ID == i).Title},";
                 }
             }
 
+            TextBlock tb_Stock = new TextBlock
+            {
+                Text = $"Остаток: {TypeDescriptor.GetProperties(item)["CountInStock"].GetValue(item)}"
+            };
+
             sub_sp.Children.Add(tb_title);
             sub_sp.Children.Add(tb_min);
             sub_sp.Children.Add(tb_Suppliers);
+            sub_sub_sp.Children.Add(tb_Stock);
             sp.Children.Add(image);
             sp.Children.Add(sub_sp);
+            sp.Children.Add(sub_sub_sp);
             ListViewMaterials.Items.Add(sp);
+        }
+
+        private void RemoveTextSearch(object sender, EventArgs e)
+        {
+            if (txbSearch.Text == "Введите для поиска")
+            {
+                txbSearch.Text = "";
+                txbSearch.Foreground = Brushes.Black;
+            }
+        }
+
+        private void AddTextSearch(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txbSearch.Text))
+            {
+                txbSearch.Text = "Введите для поиска";
+                txbSearch.Foreground = Brushes.Gray;
+            }
+        }
+
+        private void cmbFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cmbFilter.SelectedIndex != 0)
+            {
+                _type.ElementAt(0).Title = "Все типы";
+                cmbFilter.Items.Refresh();
+            }
+            else
+            {
+                _type.ElementAt(0).Title = "Фильтрация";
+                cmbFilter.Items.Refresh();
+            }
         }
     }
 }

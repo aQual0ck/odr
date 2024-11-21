@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="74477a07b85e4c6c9e7ba97ec8857f58" Name="Diagram1">
+      <Diagram DiagramId="2ac6cb294ca947f1a69f34289169132d" Name="Diagram1">
         <EntityTypeShape EntityType="materialsModel.Agent" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
         <EntityTypeShape EntityType="materialsModel.AgentPriorityHistory" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
         <EntityTypeShape EntityType="materialsModel.AgentType" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
@@ -32,7 +32,7 @@
         <AssociationConnector Association="materialsModel.FK_ProductCostHistory_Product" ManuallyRouted="false" />
         <AssociationConnector Association="materialsModel.FK_ProductMaterial_Product" ManuallyRouted="false" />
         <AssociationConnector Association="materialsModel.FK_ProductSale_Product" ManuallyRouted="false" />
-        <AssociationConnector Association="materialsModel.FK__Users__Role_Id__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="materialsModel.FK__Users__Role_Id__76969D2E" ManuallyRouted="false" />
         <AssociationConnector Association="materialsModel.MaterialSupplier" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

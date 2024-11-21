@@ -25,7 +25,24 @@
             <MenuItem Name="menuExit" Header="Выход" Click="menuExit_Click"/>
         </Menu>
 
-        <ListView Grid.Row="2" Name="ListViewMaterials">
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <TextBox Name="txbSearch" Width="250" Height="35" FontSize="14" 
+                     VerticalContentAlignment="Center" Margin="5"/>
+            <ComboBox Name="cmbSort" Width="130" Height="35" FontSize="14" 
+                      VerticalContentAlignment="Center" Margin="5">
+                <ComboBoxItem Content="По алфавиту"/>
+                <ComboBoxItem Content="По убыванию (цена)"/>
+                <ComboBoxItem Content="По возрастанию (цена)"/>
+                <ComboBoxItem Content="По убыванию (остаток)"/>
+                <ComboBoxItem Content="По возрастанию (остаток)"/>
+                <ComboBoxItem Content="По убыванию ("/>
+            </ComboBox>
+            <ComboBox Name="cmbFilter" Width="130" Height="35" FontSize="14" 
+                      VerticalContentAlignment="Center" Margin="5" 
+                      SelectionChanged="cmbFilter_SelectionChanged"/>
+        </StackPanel>
+        
+        <ListView Grid.Row="2" Name="ListViewMaterials" Width="Auto">
         </ListView>
 
         <!--<StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">

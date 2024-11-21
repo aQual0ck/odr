@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Хранилище materialsModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="materialsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Agent">
     <Key>
       <PropertyRef Name="ID" />
@@ -169,7 +169,7 @@
     <Property Name="Password" Type="nvarchar" MaxLength="16" Nullable="false" />
     <Property Name="Role_Id" Type="int" />
   </EntityType>
-  <Association Name="FK__Users__Role_Id__5EBF139D">
+  <Association Name="FK__Users__Role_Id__76969D2E">
     <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
     <End Role="Users" Type="Self.Users" Multiplicity="*" />
     <ReferentialConstraint>
@@ -337,7 +337,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Хранилище materialsModelContainer">
+  <EntityContainer Name="materialsModelStoreContainer">
     <EntitySet Name="Agent" EntityType="Self.Agent" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AgentPriorityHistory" EntityType="Self.AgentPriorityHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AgentType" EntityType="Self.AgentType" Schema="dbo" store:Type="Tables" />
@@ -355,7 +355,7 @@
     <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__Users__Role_Id__5EBF139D" Association="Self.FK__Users__Role_Id__5EBF139D">
+    <AssociationSet Name="FK__Users__Role_Id__76969D2E" Association="Self.FK__Users__Role_Id__76969D2E">
       <End Role="Roles" EntitySet="Roles" />
       <End Role="Users" EntitySet="Users" />
     </AssociationSet>
