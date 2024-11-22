@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-F:\source\odr\obj\Debug\
+D:\Projects\Csharp\odr\obj\Debug\
 odr
 none
 false
 DEBUG;TRACE
-F:\source\odr\App.xaml
+D:\Projects\Csharp\odr\App.xaml
 7-114930527
 2-197339111
 32-125648832
-18-1056719319
+1842669749
 MainWindow.xaml;Pages\PageAddMaterial.xaml;Pages\PageAddSupplier.xaml;Pages\PageAdmin.xaml;Pages\PageAdminSuppliers.xaml;Pages\PageLogin.xaml;Pages\PageUser.xaml;
 
 False

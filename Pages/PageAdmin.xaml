@@ -29,13 +29,15 @@
             <TextBox Name="txbSearch" Width="250" Height="35" FontSize="14" 
                      VerticalContentAlignment="Center" Margin="5"/>
             <ComboBox Name="cmbSort" Width="130" Height="35" FontSize="14" 
-                      VerticalContentAlignment="Center" Margin="5">
-                <ComboBoxItem Content="По алфавиту"/>
-                <ComboBoxItem Content="По убыванию (цена)"/>
-                <ComboBoxItem Content="По возрастанию (цена)"/>
-                <ComboBoxItem Content="По убыванию (остаток)"/>
-                <ComboBoxItem Content="По возрастанию (остаток)"/>
-                <ComboBoxItem Content="По убыванию ("/>
+                      VerticalContentAlignment="Center" Margin="5"
+                      SelectionChanged="cmbSort_SelectionChanged">
+                <ComboBoxItem Name="cmbStandard"  Content="По алфавиту"/>
+                <ComboBoxItem Name="cmbPrice_Des" Content="По убыванию (цена)"/>
+                <ComboBoxItem Name="cmbPrice_Asc" Content="По возрастанию (цена)"/>
+                <ComboBoxItem Name="cmbStock_Des" Content="По убыванию (остаток)"/>
+                <ComboBoxItem Name="cmbStock_Asc" Content="По возрастанию (остаток)"/>
+                <ComboBoxItem Name="cmbMin_Des" Content="По убыванию (мниимальное кол-во)"/>
+                <ComboBoxItem Name="cmbMin_Asc" Content="По возрастанию (мниимальное кол-во)"/>
             </ComboBox>
             <ComboBox Name="cmbFilter" Width="130" Height="35" FontSize="14" 
                       VerticalContentAlignment="Center" Margin="5" 
@@ -43,6 +45,42 @@
         </StackPanel>
         
         <ListView Grid.Row="2" Name="ListViewMaterials" Width="Auto">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Height="100" Width="512" VerticalAlignment="Center"
+                                HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Image Source="{Binding Source}" Width="60" Height="45"
+                               VerticalAlignment="Center" HorizontalAlignment="Center">
+                        </Image>
+                        <StackPanel Height="75" Width="355" VerticalAlignment="Center"
+                                    HorizontalAlignment="Center" Orientation="Vertical"
+                                    Margin="25, 0, 0, 0">
+                            <TextBlock>
+                                <Run DataContext="{Binding Path=MaterialType}" 
+                                     Text="{Binding Title}"/>
+                                <Run Text=" | "/>
+                                <Run Text="{Binding Title}"/>
+                            </TextBlock>
+                            <TextBlock>
+                                <Run Text="Минимальное количество: "/>
+                                <Run Text="{Binding MinCount}"/>
+                                <Run Text="{Binding Unit}"/>
+                            </TextBlock>
+                            <TextBlock Name="tbSuppliers">
+                                <Run Text="Поставщики: "/>
+                                <Run Text="{Binding Path=Supplier.Title}"/>
+                            </TextBlock> 
+                        </StackPanel>
+                        <StackPanel Height="75" Width="190" VerticalAlignment="Center"
+                                    HorizontalAlignment="Left">
+                            <TextBlock>
+                                <Run Text="Остаток: "/>
+                                <Run Text="{Binding CountInStock}"/>
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
 
         <!--<StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">

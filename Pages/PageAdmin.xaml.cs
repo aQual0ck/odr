@@ -27,11 +27,6 @@ namespace odr.Pages
         public PageAdmin()
         {
             InitializeComponent();
-            DataContext = DBModel.entObj.Material.ToList();
-            for (int i = 1; i <= DBModel.entObj.Material.Count(); i++)
-            {
-                CreateStackPanel(i);
-            }
 
             cmbFilter.SelectedValuePath = "Title";
             cmbFilter.DisplayMemberPath = "Title";
@@ -45,7 +40,10 @@ namespace odr.Pages
             _type.Insert(0, def);
             cmbFilter.ItemsSource = _type;
             cmbFilter.SelectedIndex = 0;
-            
+
+            cmbSort.SelectedIndex = 0;
+
+            ListViewMaterials.ItemsSource = DBModel.entObj.Material.ToList();
             if (string.IsNullOrEmpty(txbSearch.Text))
             {
                 txbSearch.Text = "Введите для поиска";
@@ -84,7 +82,8 @@ namespace odr.Pages
         public static Supplier S;
         private void CreateStackPanel(int id)
         {
-            var item = DBModel.entObj.Material.FirstOrDefault(x => x.ID == id);
+            var source = DBModel.entObj.Material.AsQueryable();
+            var item = source.FirstOrDefault(x => x.ID == id);
             StackPanel sp = new StackPanel
             {
                 Height = 100,
@@ -192,6 +191,28 @@ namespace odr.Pages
                 _type.ElementAt(0).Title = "Фильтрация";
                 cmbFilter.Items.Refresh();
             }
+        }
+
+        private void cmbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cmbSort.SelectedIndex != 0)
+            {
+                cmbStandard.Content = "По алфавиту";
+                cmbSort.Items.Refresh();
+            }
+            else
+            {
+                cmbStandard.Content = "Сортировка";
+                cmbSort.Items.Refresh();
+            }
+
+            //string selected = cmbSort.SelectedItem.ToString().Split(new string[] { ": " }, StringSplitOptions.None).Last();
+            //switch (selected) 
+            //{
+            //    case "По алфавиту":
+            //        CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(ListViewMaterials.ItemsSource);
+            //        break;
+            //}
         }
     }
 }

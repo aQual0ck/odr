@@ -143,7 +143,7 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Rolename" Type="String" MaxLength="24" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Users" Relationship="Self.FK__Users__Role_Id__76969D2E" FromRole="Roles" ToRole="Users" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Users__Role_Id__5EBF139D" FromRole="Roles" ToRole="Users" />
   </EntityType>
   <EntityType Name="Shop">
     <Key>
@@ -185,7 +185,7 @@
     <Property Name="Username" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Role_Id" Type="Int32" />
-    <NavigationProperty Name="Roles" Relationship="Self.FK__Users__Role_Id__76969D2E" FromRole="Users" ToRole="Roles" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK__Users__Role_Id__5EBF139D" FromRole="Users" ToRole="Roles" />
   </EntityType>
   <Association Name="FK_Agent_AgentType">
     <End Role="AgentType" Type="Self.AgentType" Multiplicity="1" />
@@ -319,7 +319,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Users__Role_Id__76969D2E">
+  <Association Name="FK__Users__Role_Id__5EBF139D">
     <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
     <End Role="Users" Type="Self.Users" Multiplicity="*" />
     <ReferentialConstraint>
@@ -396,7 +396,7 @@
       <End Role="Product" EntitySet="Product" />
       <End Role="ProductSale" EntitySet="ProductSale" />
     </AssociationSet>
-    <AssociationSet Name="FK__Users__Role_Id__76969D2E" Association="Self.FK__Users__Role_Id__76969D2E">
+    <AssociationSet Name="FK__Users__Role_Id__5EBF139D" Association="Self.FK__Users__Role_Id__5EBF139D">
       <End Role="Roles" EntitySet="Roles" />
       <End Role="Users" EntitySet="Users" />
     </AssociationSet>
