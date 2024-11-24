@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace odr.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PageUser.xaml
+    /// Interaction logic for PageEditMaterial.xaml
     /// </summary>
-    public partial class PageUser : Page
+    public partial class PageEditMaterial : Page
     {
-        public PageUser()
+        public PageEditMaterial()
         {
             InitializeComponent();
         }

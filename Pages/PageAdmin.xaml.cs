@@ -77,88 +77,7 @@ namespace odr.Pages
 
         private void txbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-
-        }
-        public static Supplier S;
-        private void CreateStackPanel(int id)
-        {
-            var source = DBModel.entObj.Material.AsQueryable();
-            var item = source.FirstOrDefault(x => x.ID == id);
-            StackPanel sp = new StackPanel
-            {
-                Height = 100,
-                Width = 510,
-                VerticalAlignment = VerticalAlignment.Center,
-                HorizontalAlignment = HorizontalAlignment.Center,
-                Orientation = Orientation.Horizontal,
-            };
-            StackPanel sub_sp = new StackPanel
-            {
-                Height = 75,
-                Width = 355,
-                VerticalAlignment = VerticalAlignment.Center,
-                HorizontalAlignment = HorizontalAlignment.Center,
-                Orientation = Orientation.Vertical,
-                Margin = new Thickness(25, 0, 0, 0)
-            };
-            StackPanel sub_sub_sp = new StackPanel
-            {
-                Height = 75,
-                Width = 100,
-                VerticalAlignment = VerticalAlignment.Center,
-                HorizontalAlignment = HorizontalAlignment.Left,
-            };
-            Image image = new Image
-            {
-                Source = (ImageSource)new ImageSourceConverter().ConvertFromString($"{Directory.GetParent(Environment.CurrentDirectory).Parent.FullName}\\{TypeDescriptor.GetProperties(item)["Image"].GetValue(item)}"),
-                Width = 60,
-                Height = 45, 
-                VerticalAlignment = VerticalAlignment.Center,
-                HorizontalAlignment = HorizontalAlignment.Center,
-            };
-            TextBlock tb_title = new TextBlock
-            {
-                Text = $"{TypeDescriptor.GetProperties(item.MaterialType)["Title"].GetValue(item.MaterialType)} | {TypeDescriptor.GetProperties(item)["Title"].GetValue(item)}"
-            };
-            TextBlock tb_min = new TextBlock
-            {
-                Text = $"Минимальное количество: {TypeDescriptor.GetProperties(item)["MinCount"].GetValue(item)} {TypeDescriptor.GetProperties(item)["Unit"].GetValue(item)}"
-            };
-
-            TextBlock tb_Suppliers = new TextBlock
-            {
-                Text = $"Поставщики: ",
-            };
-
-            for (int i = 1; i <= item.Supplier.Count(); i++)
-            {
-                if (i == item.Supplier.Count())
-                {
-                    tb_Suppliers.Text += $" {DBModel.entObj.Supplier.FirstOrDefault(x => x.ID == i).Title}";
-                }
-                else if (i % 3 == 0)
-                {
-                    tb_Suppliers.Text += $" {DBModel.entObj.Supplier.FirstOrDefault(x => x.ID == i).Title},\n";
-                }
-                else
-                {
-                    tb_Suppliers.Text += $" {DBModel.entObj.Supplier.FirstOrDefault(x => x.ID == i).Title},";
-                }
-            }
-
-            TextBlock tb_Stock = new TextBlock
-            {
-                Text = $"Остаток: {TypeDescriptor.GetProperties(item)["CountInStock"].GetValue(item)}"
-            };
-
-            sub_sp.Children.Add(tb_title);
-            sub_sp.Children.Add(tb_min);
-            sub_sp.Children.Add(tb_Suppliers);
-            sub_sub_sp.Children.Add(tb_Stock);
-            sp.Children.Add(image);
-            sp.Children.Add(sub_sp);
-            sp.Children.Add(sub_sub_sp);
-            ListViewMaterials.Items.Add(sp);
+            ApplyFilters();
         }
 
         private void RemoveTextSearch(object sender, EventArgs e)
@@ -191,13 +110,15 @@ namespace odr.Pages
                 _type.ElementAt(0).Title = "Фильтрация";
                 cmbFilter.Items.Refresh();
             }
+
+            ApplyFilters();
         }
 
         private void cmbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cmbSort.SelectedIndex != 0)
             {
-                cmbStandard.Content = "По алфавиту";
+                cmbStandard.Content = "Без сортировки";
                 cmbSort.Items.Refresh();
             }
             else
@@ -206,13 +127,55 @@ namespace odr.Pages
                 cmbSort.Items.Refresh();
             }
 
-            //string selected = cmbSort.SelectedItem.ToString().Split(new string[] { ": " }, StringSplitOptions.None).Last();
-            //switch (selected) 
-            //{
-            //    case "По алфавиту":
-            //        CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(ListViewMaterials.ItemsSource);
-            //        break;
-            //}
+            ApplyFilters();
+        }
+
+        private void ListViewMaterials_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void ApplyFilters()
+        {
+            int typeId = Convert.ToInt32(TypeDescriptor.GetProperties(cmbFilter.SelectedItem)["ID"].GetValue(cmbFilter.SelectedItem));
+            string searchText = txbSearch.Text.ToLower();
+
+            var query = DBModel.entObj.Material.AsQueryable();
+
+            //if (cmbSort.SelectedIndex == 0)
+            //    query = query;
+
+            //По убыванию (цена)
+            if (cmbSort.SelectedIndex == 1)
+                query = query.OrderByDescending(m => m.Cost);
+
+            //По возрастанию (цена)
+            if (cmbSort.SelectedIndex == 2)
+                query = query.OrderBy(m => m.Cost);
+
+            //По убыванию (остаток)
+            if (cmbSort.SelectedIndex == 3)
+                query = query.OrderByDescending(m => m.CountInStock);
+
+            //По возрастанию (остаток)
+            if (cmbSort.SelectedIndex == 4)
+                query = query.OrderBy(m => m.CountInStock);
+
+            //По убыванию (минимальное кол-во)
+            if (cmbSort.SelectedIndex == 5)
+                query = query.OrderByDescending(m => m.MinCount);
+
+            //По возрастанию (минимальное кол-во)
+            if (cmbSort.SelectedIndex == 6)
+                query = query.OrderBy(m => m.MinCount);
+
+            if (typeId != 0)
+                query = query.Where(m => m.MaterialTypeID == typeId);
+
+            if (txbSearch.Text != "Введите для поиска" && !string.IsNullOrEmpty(txbSearch.Text))
+                query = query.Where(m => m.Title.ToLower().Contains(searchText));
+
+            ListViewMaterials.ItemsSource = query.ToList();
         }
     }
 }

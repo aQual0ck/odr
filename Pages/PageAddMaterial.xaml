@@ -6,9 +6,24 @@
       xmlns:local="clr-namespace:odr.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageAddMaterial">
+      Title="Добавление материала">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         
+        <Menu>
+            <MenuItem Header="Назад"/>
+        </Menu>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" 
+                    HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Название:" Width="100"/>
+                <TextBox Name="txbTitle" Width="150" Margin="5, 5, 0, 5"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

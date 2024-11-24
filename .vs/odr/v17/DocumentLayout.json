@@ -1,20 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projects\\Csharp\\odr\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|D:\\Projects\\Csharp\\odr\\pages\\pageadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\pages\\pageadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\classes\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:classes\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "F:\\source\\odr\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,70 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Material.cs",
-              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Classes\\Material.cs",
-              "RelativeDocumentMoniker": "Classes\\Material.cs",
-              "ToolTip": "D:\\Projects\\Csharp\\odr\\Classes\\Material.cs",
-              "RelativeToolTip": "Classes\\Material.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAABnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:46:52.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PageAdmin.xaml",
-              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdmin.xaml",
-              "RelativeDocumentMoniker": "Pages\\PageAdmin.xaml",
-              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdmin.xaml",
-              "RelativeToolTip": "Pages\\PageAdmin.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-22T09:03:37.291Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "8196a601-a096-4448-8f07-be8dfa76cbff",
-        "Display": 1,
-        "X": 673,
-        "Y": -28,
-        "Width": 1558,
-        "Height": 787,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PageAdmin.xaml.cs",
-              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdmin.xaml.cs",
-              "RelativeDocumentMoniker": "Pages\\PageAdmin.xaml.cs",
-              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdmin.xaml.cs",
-              "RelativeToolTip": "Pages\\PageAdmin.xaml.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAQwC0AAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T19:01:57.024Z",
-              "EditorCaption": ""
             }
           ]
         }

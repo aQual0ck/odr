@@ -4,9 +4,13 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:odr.Pages"
+      xmlns:classes="clr-namespace:odr.Classes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Материалы">
+    <Page.Resources>
+        <classes:SupplierConverter x:Key="SupplierConverter"/>
+    </Page.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -27,24 +31,33 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="1">
             <TextBox Name="txbSearch" Width="250" Height="35" FontSize="14" 
-                     VerticalContentAlignment="Center" Margin="5"/>
+                     VerticalContentAlignment="Center" Margin="5"
+                     TextChanged="txbSearch_TextChanged"/>
             <ComboBox Name="cmbSort" Width="130" Height="35" FontSize="14" 
                       VerticalContentAlignment="Center" Margin="5"
                       SelectionChanged="cmbSort_SelectionChanged">
-                <ComboBoxItem Name="cmbStandard"  Content="По алфавиту"/>
-                <ComboBoxItem Name="cmbPrice_Des" Content="По убыванию (цена)"/>
-                <ComboBoxItem Name="cmbPrice_Asc" Content="По возрастанию (цена)"/>
-                <ComboBoxItem Name="cmbStock_Des" Content="По убыванию (остаток)"/>
-                <ComboBoxItem Name="cmbStock_Asc" Content="По возрастанию (остаток)"/>
-                <ComboBoxItem Name="cmbMin_Des" Content="По убыванию (мниимальное кол-во)"/>
-                <ComboBoxItem Name="cmbMin_Asc" Content="По возрастанию (мниимальное кол-во)"/>
+                <ComboBoxItem Name="cmbStandard" Content="Без сортировки"/>
+                <ComboBoxItem Content="По убыванию (цена)"/>
+                <ComboBoxItem Content="По возрастанию (цена)"/>
+                <ComboBoxItem Content="По убыванию (остаток)"/>
+                <ComboBoxItem Content="По возрастанию (остаток)"/>
+                <ComboBoxItem Content="По убыванию (мниимальное кол-во)"/>
+                <ComboBoxItem Content="По возрастанию (мниимальное кол-во)"/>
             </ComboBox>
             <ComboBox Name="cmbFilter" Width="130" Height="35" FontSize="14" 
                       VerticalContentAlignment="Center" Margin="5" 
                       SelectionChanged="cmbFilter_SelectionChanged"/>
         </StackPanel>
         
-        <ListView Grid.Row="2" Name="ListViewMaterials" Width="Auto">
+        <ListView Grid.Row="2" Name="ListViewMaterials" Width="Auto" 
+                  MouseDoubleClick="ListViewMaterials_MouseDoubleClick">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="Margin" Value="0, 5, 0, 0"/>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Height="100" Width="512" VerticalAlignment="Center"
@@ -52,10 +65,10 @@
                         <Image Source="{Binding Source}" Width="60" Height="45"
                                VerticalAlignment="Center" HorizontalAlignment="Center">
                         </Image>
-                        <StackPanel Height="75" Width="355" VerticalAlignment="Center"
+                        <StackPanel Height="75" Width="340" VerticalAlignment="Center"
                                     HorizontalAlignment="Center" Orientation="Vertical"
                                     Margin="25, 0, 0, 0">
-                            <TextBlock>
+                            <TextBlock FontSize="16">
                                 <Run DataContext="{Binding Path=MaterialType}" 
                                      Text="{Binding Title}"/>
                                 <Run Text=" | "/>
@@ -66,16 +79,17 @@
                                 <Run Text="{Binding MinCount}"/>
                                 <Run Text="{Binding Unit}"/>
                             </TextBlock>
-                            <TextBlock Name="tbSuppliers">
-                                <Run Text="Поставщики: "/>
-                                <Run Text="{Binding Path=Supplier.Title}"/>
-                            </TextBlock> 
+                            <TextBlock TextWrapping="Wrap">
+                                <Run Text="Поставщики: " FontWeight="Bold"/>
+                                <Run Text="{Binding Supplier, Converter={StaticResource SupplierConverter}}"/>
+                            </TextBlock>
                         </StackPanel>
                         <StackPanel Height="75" Width="190" VerticalAlignment="Center"
                                     HorizontalAlignment="Left">
                             <TextBlock>
                                 <Run Text="Остаток: "/>
                                 <Run Text="{Binding CountInStock}"/>
+                                <Run Text="{Binding Unit}"/>
                             </TextBlock>
                         </StackPanel>
                     </StackPanel>

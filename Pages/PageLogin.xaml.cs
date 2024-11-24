@@ -39,13 +39,9 @@ namespace odr.Pages
                     {
                         tbWarning.Visibility = Visibility.Visible;
                     }
-                    else if (userObj.Role_Id == 1)
-                    {
-                        Classes.FrameClass.frmObj.Navigate(new PageAdmin());
-                    }
                     else
                     {
-                        Classes.FrameClass.frmObj.Navigate(new PageUser());
+                        Classes.FrameClass.frmObj.Navigate(new PageAdmin());
                     }
                 }
                 else

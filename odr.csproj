@@ -86,6 +86,7 @@
     <Compile Include="Classes\Material.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\MaterialConverter.cs" />
     <Compile Include="Classes\MaterialCountHistory.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -131,6 +132,7 @@
     <Compile Include="Classes\Supplier.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\SupplierConverter.cs" />
     <Compile Include="Classes\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -157,11 +159,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PageLogin.xaml">
+    <Page Include="Pages\PageEditMaterial.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PageUser.xaml">
+    <Page Include="Pages\PageEditSupplier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,11 +185,14 @@
     <Compile Include="Pages\PageAdminSuppliers.xaml.cs">
       <DependentUpon>PageAdminSuppliers.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageEditMaterial.xaml.cs">
+      <DependentUpon>PageEditMaterial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageEditSupplier.xaml.cs">
+      <DependentUpon>PageEditSupplier.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageLogin.xaml.cs">
       <DependentUpon>PageLogin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageUser.xaml.cs">
-      <DependentUpon>PageUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
