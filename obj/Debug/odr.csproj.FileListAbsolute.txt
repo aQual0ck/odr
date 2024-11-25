@@ -69,4 +69,4 @@ D:\Projects\Csharp\odr\obj\Debug\Pages\PageEditSupplier.g.cs
 D:\Projects\Csharp\odr\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Projects\Csharp\odr\obj\Debug\Pages\PageEditMaterial.baml
 D:\Projects\Csharp\odr\obj\Debug\Pages\PageEditSupplier.baml
-D:\Projects\Csharp\odr\obj\Debug\odr.csproj.CopyComplete
+D:\Projects\Csharp\odr\obj\Debug\odr.csproj.Up2Date

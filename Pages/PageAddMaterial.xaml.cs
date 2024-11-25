@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
+using System.ComponentModel;
 
 namespace odr.Pages
 {
@@ -41,6 +42,7 @@ namespace odr.Pages
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            int mtid = Convert.ToInt32(TypeDescriptor.GetProperties(cmbMaterialType.SelectedItem)["ID"].GetValue(cmbMaterialType.SelectedItem));
             mat = new Classes.Material()
             {
                 Title = txbTitle.Text,
@@ -49,7 +51,7 @@ namespace odr.Pages
                 CountInStock = Convert.ToInt32(txbCountInStock.Text),
                 MinCount = Convert.ToInt32(txbMinCount.Text),
                 Cost = Convert.ToInt32(txbCost.Text),
-
+                MaterialTypeID = mtid,
                 Supplier = _sup
             };
         }
@@ -57,10 +59,9 @@ namespace odr.Pages
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             _sup.Add(cmbSupplier.SelectedItem as Classes.Supplier);
-            if (_sup.Count == 1)
-                tbSupplier.Text += $"{cmbSupplier.SelectedValue}";
-            else
-                tbSupplier.Text += $", {cmbSupplier.SelectedValue}";
+            Run run = new Run($"\n{cmbSupplier.SelectedValue}");
+            Hyperlink btnDel = new Hyperlink();
+            btnDel.Click += btnDel_Click;
             cmbSupplier.ItemsSource = Classes.DBModel.entObj.Supplier.ToList();
         }
 
@@ -76,6 +77,11 @@ namespace odr.Pages
                 _filepath = ofd.FileName.Replace(ofd.FileName.Substring(0, ofd.FileName.IndexOf("\\materials")), "");
                 txbImage.Text = _filepath;
             }
+        }
+
+        private void btnDel_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\source\\odr\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Projects\\Csharp\\odr\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\pages\\pageaddmaterial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageaddmaterial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\pages\\pageaddmaterial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageaddmaterial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PageAddMaterial.xaml",
+              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageAddMaterial.xaml",
+              "RelativeDocumentMoniker": "Pages\\PageAddMaterial.xaml",
+              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageAddMaterial.xaml",
+              "RelativeToolTip": "Pages\\PageAddMaterial.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-25T10:00:27.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PageAddMaterial.xaml.cs",
+              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageAddMaterial.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\PageAddMaterial.xaml.cs",
+              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageAddMaterial.xaml.cs",
+              "RelativeToolTip": "Pages\\PageAddMaterial.xaml.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAIwD8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:00:15.917Z",
+              "EditorCaption": ""
             }
           ]
         }
