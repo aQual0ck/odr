@@ -13,7 +13,6 @@ D:\Projects\Csharp\odr\obj\Debug\Pages\PageAddSupplier.g.cs
 D:\Projects\Csharp\odr\obj\Debug\Pages\PageAdmin.g.cs
 D:\Projects\Csharp\odr\obj\Debug\Pages\PageAdminSuppliers.g.cs
 D:\Projects\Csharp\odr\obj\Debug\Pages\PageLogin.g.cs
-D:\Projects\Csharp\odr\obj\Debug\Pages\PageUser.g.cs
 D:\Projects\Csharp\odr\obj\Debug\App.g.cs
 D:\Projects\Csharp\odr\obj\Debug\odr_Content.g.cs
 D:\Projects\Csharp\odr\obj\Debug\odr_MarkupCompile.cache
@@ -24,12 +23,10 @@ D:\Projects\Csharp\odr\obj\Debug\Pages\PageAddSupplier.baml
 D:\Projects\Csharp\odr\obj\Debug\Pages\PageAdmin.baml
 D:\Projects\Csharp\odr\obj\Debug\Pages\PageAdminSuppliers.baml
 D:\Projects\Csharp\odr\obj\Debug\Pages\PageLogin.baml
-D:\Projects\Csharp\odr\obj\Debug\Pages\PageUser.baml
 D:\Projects\Csharp\odr\obj\Debug\odr.g.resources
 D:\Projects\Csharp\odr\obj\Debug\odr.Properties.Resources.resources
 D:\Projects\Csharp\odr\obj\Debug\odr.csproj.GenerateResource.cache
 D:\Projects\Csharp\odr\obj\Debug\odr.csproj.CoreCompileInputs.cache
-D:\Projects\Csharp\odr\obj\Debug\odr.csproj.Up2Date
 D:\Projects\Csharp\odr\obj\Debug\odr.exe
 D:\Projects\Csharp\odr\obj\Debug\odr.pdb
 F:\source\odr\bin\Debug\odr.exe.config
@@ -67,3 +64,9 @@ F:\source\odr\obj\Debug\odr.csproj.Up2Date
 F:\source\odr\obj\Debug\odr.exe
 F:\source\odr\obj\Debug\odr.pdb
 F:\source\odr\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Projects\Csharp\odr\obj\Debug\Pages\PageEditMaterial.g.cs
+D:\Projects\Csharp\odr\obj\Debug\Pages\PageEditSupplier.g.cs
+D:\Projects\Csharp\odr\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Projects\Csharp\odr\obj\Debug\Pages\PageEditMaterial.baml
+D:\Projects\Csharp\odr\obj\Debug\Pages\PageEditSupplier.baml
+D:\Projects\Csharp\odr\obj\Debug\odr.csproj.CopyComplete

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\source\odr\obj\Debug\
+D:\Projects\Csharp\odr\obj\Debug\
 odr
 none
 false
 DEBUG;TRACE
-F:\source\odr\App.xaml
-7-114930527
-2-197339111
-341759427515
-18-1056719319
-MainWindow.xaml;Pages\PageAddMaterial.xaml;Pages\PageAddSupplier.xaml;Pages\PageAdmin.xaml;Pages\PageAdminSuppliers.xaml;Pages\PageLogin.xaml;Pages\PageUser.xaml;
+D:\Projects\Csharp\odr\App.xaml
+8-890082203
+2-732627922
+35-1647234098
+18-259670978
+MainWindow.xaml;Pages\PageAddMaterial.xaml;Pages\PageAddSupplier.xaml;Pages\PageAdmin.xaml;Pages\PageAdminSuppliers.xaml;Pages\PageEditMaterial.xaml;Pages\PageEditSupplier.xaml;Pages\PageLogin.xaml;
 
 False
 
