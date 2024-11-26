@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
 using System.ComponentModel;
+using odr.Classes;
 
 namespace odr.Pages
 {
@@ -59,9 +60,17 @@ namespace odr.Pages
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             _sup.Add(cmbSupplier.SelectedItem as Classes.Supplier);
+
             Run run = new Run($"\n{cmbSupplier.SelectedValue}");
-            Hyperlink btnDel = new Hyperlink();
+            Run run1 = new Run(" (");
+            Run runDel = new Run("Удалить");
+            Hyperlink btnDel = new Hyperlink(runDel);
             btnDel.Click += btnDel_Click;
+            Run run2 = new Run(")");
+            tbSupplier.Inlines.Add(run);
+            tbSupplier.Inlines.Add(run1);
+            tbSupplier.Inlines.Add(btnDel);
+            tbSupplier.Inlines.Add(run2);
             cmbSupplier.ItemsSource = Classes.DBModel.entObj.Supplier.ToList();
         }
 
@@ -81,7 +90,11 @@ namespace odr.Pages
 
         private void btnDel_Click(object sender, RoutedEventArgs e)
         {
-
+            Hyperlink hp = e.Source as Hyperlink;
+            var run = tbSupplier.Inlines.FirstOrDefault() as Run;
+            string supplier = run.Text.Substring(1, run.Text.Length - 1);
+            Supplier sup = DBModel.entObj.Supplier.FirstOrDefault(s => s.Title == supplier);
+            _sup.Remove(sup);
         }
     }
 }
