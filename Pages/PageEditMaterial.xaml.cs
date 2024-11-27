@@ -22,13 +22,14 @@ namespace odr.Pages
     /// </summary>
     public partial class PageEditMaterial : Page
     {
-        private ICollection<Supplier> _sup;
+        private List<Supplier> _sup = new List<Supplier>();
         public PageEditMaterial(object selected_mat)
         {
             InitializeComponent();
             DataContext = selected_mat;
 
-            _sup = (ICollection<Supplier>)TypeDescriptor.GetProperties(DataContext)["Supplier"].GetValue(DataContext);
+            ICollection<Supplier> suppliers = (ICollection<Supplier>)TypeDescriptor.GetProperties(DataContext)["Supplier"].GetValue(DataContext);
+            _sup = suppliers.ToList();
 
             foreach (Classes.Supplier s in _sup)
             {
