@@ -1,42 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projects\\Csharp\\odr\\",
+  "WorkspaceRootPath": "F:\\source\\odr\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\pages\\pageeditmaterial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|f:\\source\\odr\\pages\\pageeditsupplier.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageeditsupplier.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|f:\\source\\odr\\pages\\pageeditsupplier.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageeditsupplier.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|f:\\source\\odr\\pages\\pageaddsupplier.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageaddsupplier.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|f:\\source\\odr\\pages\\pageaddsupplier.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageaddsupplier.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|f:\\source\\odr\\pages\\pageeditmaterial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageeditmaterial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\pages\\pageaddmaterial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageaddmaterial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\pages\\pageadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|f:\\source\\odr\\pages\\pageadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\pages\\pageeditmaterial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageeditmaterial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\classes\\editsupplierconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:classes\\editsupplierconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\classes\\supplierconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:classes\\supplierconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\pages\\pageadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\pages\\pageaddmaterial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageaddmaterial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|d:\\projects\\csharp\\odr\\pages\\pageadminsuppliers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5AE8EB42-DD4D-4045-AC77-1E483454986B}|odr.csproj|solutionrelative:pages\\pageadminsuppliers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,136 +42,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PageAddMaterial.xaml",
-              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageAddMaterial.xaml",
-              "RelativeDocumentMoniker": "Pages\\PageAddMaterial.xaml",
-              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageAddMaterial.xaml",
-              "RelativeToolTip": "Pages\\PageAddMaterial.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T08:25:47.701Z",
+              "DocumentIndex": 2,
+              "Title": "PageAddSupplier.xaml.cs",
+              "DocumentMoniker": "F:\\source\\odr\\Pages\\PageAddSupplier.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\PageAddSupplier.xaml.cs",
+              "ToolTip": "F:\\source\\odr\\Pages\\PageAddSupplier.xaml.cs",
+              "RelativeToolTip": "Pages\\PageAddSupplier.xaml.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T14:39:58.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PageEditMaterial.xaml",
-              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageEditMaterial.xaml",
-              "RelativeDocumentMoniker": "Pages\\PageEditMaterial.xaml",
-              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageEditMaterial.xaml",
-              "RelativeToolTip": "Pages\\PageEditMaterial.xaml",
+              "Title": "PageAddSupplier.xaml",
+              "DocumentMoniker": "F:\\source\\odr\\Pages\\PageAddSupplier.xaml",
+              "RelativeDocumentMoniker": "Pages\\PageAddSupplier.xaml",
+              "ToolTip": "F:\\source\\odr\\Pages\\PageAddSupplier.xaml",
+              "RelativeToolTip": "Pages\\PageAddSupplier.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T08:25:41.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PageEditMaterial.xaml.cs",
-              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageEditMaterial.xaml.cs",
-              "RelativeDocumentMoniker": "Pages\\PageEditMaterial.xaml.cs",
-              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageEditMaterial.xaml.cs",
-              "RelativeToolTip": "Pages\\PageEditMaterial.xaml.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAowB8AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T08:24:31.772Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PageAdmin.xaml.cs",
-              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdmin.xaml.cs",
-              "RelativeDocumentMoniker": "Pages\\PageAdmin.xaml.cs",
-              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdmin.xaml.cs",
-              "RelativeToolTip": "Pages\\PageAdmin.xaml.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAAAYwIsAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T08:14:43.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PageAdminSuppliers.xaml",
-              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdminSuppliers.xaml",
-              "RelativeDocumentMoniker": "Pages\\PageAdminSuppliers.xaml",
-              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdminSuppliers.xaml",
-              "RelativeToolTip": "Pages\\PageAdminSuppliers.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T07:14:25.251Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "7e847571-8db0-4d52-a964-2c7d17c906ce",
-        "Display": 1,
-        "X": 571,
-        "Y": 149,
-        "Width": 1558,
-        "Height": 787,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PageAddMaterial.xaml.cs",
-              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageAddMaterial.xaml.cs",
-              "RelativeDocumentMoniker": "Pages\\PageAddMaterial.xaml.cs",
-              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageAddMaterial.xaml.cs",
-              "RelativeToolTip": "Pages\\PageAddMaterial.xaml.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAwwBsAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T10:00:15.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PageAdmin.xaml",
-              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdmin.xaml",
-              "RelativeDocumentMoniker": "Pages\\PageAdmin.xaml",
-              "ToolTip": "D:\\Projects\\Csharp\\odr\\Pages\\PageAdmin.xaml",
-              "RelativeToolTip": "Pages\\PageAdmin.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T08:08:05.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SupplierConverter.cs",
-              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Classes\\SupplierConverter.cs",
-              "RelativeDocumentMoniker": "Classes\\SupplierConverter.cs",
-              "ToolTip": "D:\\Projects\\Csharp\\odr\\Classes\\SupplierConverter.cs",
-              "RelativeToolTip": "Classes\\SupplierConverter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T08:28:22.689Z",
+              "WhenOpened": "2024-11-27T14:35:12.693Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "EditSupplierConverter.cs",
-              "DocumentMoniker": "D:\\Projects\\Csharp\\odr\\Classes\\EditSupplierConverter.cs",
-              "RelativeDocumentMoniker": "Classes\\EditSupplierConverter.cs",
-              "ToolTip": "D:\\Projects\\Csharp\\odr\\Classes\\EditSupplierConverter.cs",
-              "RelativeToolTip": "Classes\\EditSupplierConverter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAnAAAA",
+              "Title": "PageEditMaterial.xaml.cs",
+              "DocumentMoniker": "F:\\source\\odr\\Pages\\PageEditMaterial.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\PageEditMaterial.xaml.cs",
+              "ToolTip": "F:\\source\\odr\\Pages\\PageEditMaterial.xaml.cs",
+              "RelativeToolTip": "Pages\\PageEditMaterial.xaml.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAmwHgAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T08:45:35.39Z",
+              "WhenOpened": "2024-11-27T14:13:43.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Pages\\PageEditSupplier.xaml.cs",
+              "DocumentMoniker": "F:\\source\\odr\\Pages\\PageEditSupplier.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\PageEditSupplier.xaml.cs",
+              "ToolTip": "F:\\source\\odr\\Pages\\PageEditSupplier.xaml.cs",
+              "RelativeToolTip": "Pages\\PageEditSupplier.xaml.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACMAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T13:54:25.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PageEditSupplier.xaml",
+              "DocumentMoniker": "F:\\source\\odr\\Pages\\PageEditSupplier.xaml",
+              "RelativeDocumentMoniker": "Pages\\PageEditSupplier.xaml",
+              "ToolTip": "F:\\source\\odr\\Pages\\PageEditSupplier.xaml",
+              "RelativeToolTip": "Pages\\PageEditSupplier.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-27T13:51:47.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PageAdmin.xaml.cs",
+              "DocumentMoniker": "F:\\source\\odr\\Pages\\PageAdmin.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\PageAdmin.xaml.cs",
+              "ToolTip": "F:\\source\\odr\\Pages\\PageAdmin.xaml.cs",
+              "RelativeToolTip": "Pages\\PageAdmin.xaml.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAgwH4AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T12:39:16.929Z",
               "EditorCaption": ""
             }
           ]

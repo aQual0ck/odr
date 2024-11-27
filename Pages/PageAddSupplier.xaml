@@ -49,7 +49,7 @@
                 <Button Name="btnAdd" Content="Добавить" Height="22" Width="75" 
                         Grid.Row="1" Click="btnAdd_Click"/>
             </StackPanel>
-            <TextBlock Name="tbMaterial" Text="Поставщики: " TextWrapping="Wrap"/>
+            <TextBlock Name="tbMaterial" Text="Материалы: " TextWrapping="Wrap"/>
             <Button Name="btnSave" Height="30" Width="75" Content="Сохранить" 
                     Click="btnSave_Click"/>
         </StackPanel>

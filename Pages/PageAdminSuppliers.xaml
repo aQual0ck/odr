@@ -55,7 +55,8 @@
             </ComboBox>
         </StackPanel>
 
-        <ListView Grid.Row="2" Name="ListViewSuppliers">
+        <ListView Grid.Row="2" Name="ListViewSuppliers"
+                  MouseDoubleClick="ListViewSuppliers_MouseDoubleClick">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="BorderBrush" Value="Black"/>

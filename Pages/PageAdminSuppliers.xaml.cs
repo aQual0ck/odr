@@ -165,5 +165,14 @@ namespace odr.Pages
                 txbSearch.Foreground = Brushes.Gray;
             }
         }
+
+        private void ListViewSuppliers_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (ListViewSuppliers.SelectedItem != null)
+            {
+                var supplier = ListViewSuppliers.SelectedItem;
+                Classes.FrameClass.frmObj.Navigate(new PageEditSupplier(supplier));
+            }
+        }
     }
 }

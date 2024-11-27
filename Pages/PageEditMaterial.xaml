@@ -20,6 +20,7 @@
 
         <Menu>
             <MenuItem Header="Назад" Name="menuBack" Click="menuBack_Click"/>
+            <MenuItem Header="Удалить" Name="menuDelete" Click="menuDelete_Click"/>
         </Menu>
         <StackPanel Grid.Row="1" VerticalAlignment="Center" 
             HorizontalAlignment="Center">

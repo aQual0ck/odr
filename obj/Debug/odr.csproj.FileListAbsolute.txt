@@ -44,7 +44,6 @@ F:\source\odr\obj\Debug\Pages\PageAddSupplier.g.cs
 F:\source\odr\obj\Debug\Pages\PageAdmin.g.cs
 F:\source\odr\obj\Debug\Pages\PageAdminSuppliers.g.cs
 F:\source\odr\obj\Debug\Pages\PageLogin.g.cs
-F:\source\odr\obj\Debug\Pages\PageUser.g.cs
 F:\source\odr\obj\Debug\App.g.cs
 F:\source\odr\obj\Debug\odr_Content.g.cs
 F:\source\odr\obj\Debug\odr_MarkupCompile.cache
@@ -55,7 +54,6 @@ F:\source\odr\obj\Debug\Pages\PageAddSupplier.baml
 F:\source\odr\obj\Debug\Pages\PageAdmin.baml
 F:\source\odr\obj\Debug\Pages\PageAdminSuppliers.baml
 F:\source\odr\obj\Debug\Pages\PageLogin.baml
-F:\source\odr\obj\Debug\Pages\PageUser.baml
 F:\source\odr\obj\Debug\odr.g.resources
 F:\source\odr\obj\Debug\odr.Properties.Resources.resources
 F:\source\odr\obj\Debug\odr.csproj.GenerateResource.cache
@@ -70,3 +68,7 @@ D:\Projects\Csharp\odr\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Projects\Csharp\odr\obj\Debug\Pages\PageEditMaterial.baml
 D:\Projects\Csharp\odr\obj\Debug\Pages\PageEditSupplier.baml
 D:\Projects\Csharp\odr\obj\Debug\odr.csproj.Up2Date
+F:\source\odr\obj\Debug\Pages\PageEditMaterial.g.cs
+F:\source\odr\obj\Debug\Pages\PageEditSupplier.g.cs
+F:\source\odr\obj\Debug\Pages\PageEditMaterial.baml
+F:\source\odr\obj\Debug\Pages\PageEditSupplier.baml
