@@ -33,6 +33,10 @@ namespace odr.Pages
             cmbSupplier.SelectedValuePath = "Title";
             cmbSupplier.DisplayMemberPath = "Title";
             cmbSupplier.ItemsSource = Classes.DBModel.entObj.Supplier.ToList();
+
+            cmbMaterialType.SelectedValuePath = "Title";
+            cmbMaterialType.DisplayMemberPath = "Title";
+            cmbMaterialType.ItemsSource = Classes.DBModel.entObj.MaterialType.ToList();
         }
 
         private void cmbSupplier_TextChanged(object sender, RoutedEventArgs e)
@@ -52,9 +56,14 @@ namespace odr.Pages
                 CountInStock = Convert.ToInt32(txbCountInStock.Text),
                 MinCount = Convert.ToInt32(txbMinCount.Text),
                 Cost = Convert.ToInt32(txbCost.Text),
+                Image = txbImage.Text,
                 MaterialTypeID = mtid,
                 Supplier = _sup
             };
+            Classes.DBModel.entObj.Material.Add(mat);
+            Classes.DBModel.entObj.SaveChanges();
+
+            MessageBox.Show("Сохранено");
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -62,15 +71,9 @@ namespace odr.Pages
             _sup.Add(cmbSupplier.SelectedItem as Classes.Supplier);
 
             Run run = new Run($"\n{cmbSupplier.SelectedValue}");
-            Run run1 = new Run(" (");
-            Run runDel = new Run("Удалить");
-            Hyperlink btnDel = new Hyperlink(runDel);
+            Hyperlink btnDel = new Hyperlink(run);
             btnDel.Click += btnDel_Click;
-            Run run2 = new Run(")");
-            tbSupplier.Inlines.Add(run);
-            tbSupplier.Inlines.Add(run1);
             tbSupplier.Inlines.Add(btnDel);
-            tbSupplier.Inlines.Add(run2);
             cmbSupplier.ItemsSource = Classes.DBModel.entObj.Supplier.ToList();
         }
 
@@ -91,10 +94,19 @@ namespace odr.Pages
         private void btnDel_Click(object sender, RoutedEventArgs e)
         {
             Hyperlink hp = e.Source as Hyperlink;
-            var run = tbSupplier.Inlines.FirstOrDefault() as Run;
+            var run = hp.Inlines.FirstOrDefault() as Run;
             string supplier = run.Text.Substring(1, run.Text.Length - 1);
             Supplier sup = DBModel.entObj.Supplier.FirstOrDefault(s => s.Title == supplier);
-            _sup.Remove(sup);
+            if (MessageBox.Show("Удалить поставщика?", "Удаление поставщика", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                _sup.Remove(sup);
+                tbSupplier.Inlines.Remove(tbSupplier.Inlines.FirstOrDefault(s => s == hp));
+            }
+        }
+
+        private void menuBack_Click(object sender, RoutedEventArgs e)
+        {
+            FrameClass.frmObj.Navigate(new PageAdmin());
         }
     }
 }

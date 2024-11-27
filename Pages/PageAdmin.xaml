@@ -49,7 +49,7 @@
                       SelectionChanged="cmbFilter_SelectionChanged"/>
         </StackPanel>
         
-        <ListView Grid.Row="2" Name="ListViewMaterials" Width="Auto" 
+        <ListView Grid.Row="2" Name="ListViewMaterials" Width="Auto"
                   MouseDoubleClick="ListViewMaterials_MouseDoubleClick">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">

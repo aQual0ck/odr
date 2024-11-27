@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
 
         <Menu>
-            <MenuItem Header="Назад"/>
+            <MenuItem Header="Назад" Name="menuBack" Click="menuBack_Click"/>
         </Menu>
         <StackPanel Grid.Row="1" VerticalAlignment="Center" 
                     HorizontalAlignment="Center">
@@ -63,7 +63,8 @@
                         Click="btnAdd_Click"/>
             </StackPanel>
             <TextBlock Name="tbSupplier" Text="Поставщики: " TextWrapping="Wrap"/>
-            <Button Name="btnSave" Height="30" Width="75" Content="Сохранить" Click="btnSave_Click"/>
+            <Button Name="btnSave" Height="30" Width="75" Content="Сохранить" 
+                    Click="btnSave_Click"/>
         </StackPanel>
     </Grid>
 </Page>

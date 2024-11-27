@@ -132,7 +132,11 @@ namespace odr.Pages
 
         private void ListViewMaterials_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            
+            if (ListViewMaterials.SelectedItem != null)
+            {
+                var material = ListViewMaterials.SelectedItem;
+                Classes.FrameClass.frmObj.Navigate(new PageEditMaterial(material));
+            }
         }
 
         private void ApplyFilters()

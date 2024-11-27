@@ -13,5 +13,6 @@ namespace odr
     /// </summary>
     public partial class App : Application
     {
+        public static string DateFormat = "yyyy-MM-dd";
     }
 }

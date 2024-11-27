@@ -4,11 +4,80 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:odr.Pages"
+      xmlns:classes="clr-namespace:odr.Classes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageEditMaterial">
+      Title="Изменение материала">
+    <Page.Resources>
+        <classes:EditSupplierConverter x:Key="EditSupplierConverter"/>
+    </Page.Resources>
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Menu>
+            <MenuItem Header="Назад" Name="menuBack" Click="menuBack_Click"/>
+        </Menu>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" 
+            HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Название:" Width="150"/>
+                <TextBox Name="txbTitle" Width="150" Margin="5, 5, 0, 5"
+                         Text="{Binding Title}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Кол-во в упаковке:" Width="150"/>
+                <TextBox Name="txbCountInPack" Width="150" Margin="5, 5, 0, 5"
+                         Text="{Binding CountInPack}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Единица измерения:" Width="150"/>
+                <TextBox Name="txbUnit" Width="150" Margin="5, 5, 0, 5"
+                         Text="{Binding Unit}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Остаток:" Width="150"/>
+                <TextBox Name="txbCountInStock" Width="150" Margin="5, 5, 0, 5"
+                         Text="{Binding CountInStock}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Мин. количество:" Width="150"/>
+                <TextBox Name="txbMinCount" Width="150" Margin="5, 5, 0, 5"
+                         Text="{Binding MinCount}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Цена:" Width="150"/>
+                <TextBox Name="txbCost" Width="150" Margin="5, 5, 0, 5"
+                         Text="{Binding Cost}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Картинка:" Width="150"/>
+                <TextBox Name="txbImage" Width="150" Margin="5, 5, 0, 5"
+                         Text="{Binding Image}"/>
+                <Button Name="btnPick" Content="..." Width="20" Height="18" 
+                        Margin="-20, 0, 0, 0" Click="btnPick_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Тип материала:" Width="150"/>
+                <ComboBox Name="cmbMaterialType" Width="150" Margin="5, 5, 0, 5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Поставщик:" Width="150"/>
+                <ComboBox Name="cmbSupplier" Width="150" Margin="5, 5, 5, 5" 
+                          IsTextSearchEnabled="True" IsEditable="True" StaysOpenOnEdit="True"
+                          IsTextSearchCaseSensitive="False" 
+                          TextBoxBase.TextChanged="cmbSupplier_TextChanged"/>
+                <Button Name="btnAdd" Content="Добавить" Height="22" Width="75" Grid.Row="1"
+                        Click="btnAdd_Click"/>
+            </StackPanel>
+            <TextBlock Name="tbSupplier" TextWrapping="Wrap">
+                <Run Text="Поставщики: "/>
+            </TextBlock>
+            <Button Name="btnSave" Height="30" Width="75" Content="Сохранить" 
+                    Click="btnSave_Click"/>
+        </StackPanel>
     </Grid>
 </Page>
