@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,23 +18,23 @@ using System.Windows.Shapes;
 namespace odr.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PageAdmin.xaml
+    /// Interaction logic for PageUser.xaml
     /// </summary>
-    public partial class PageAdmin : Page
+    public partial class PageUser : Page
     {
         private List<MaterialType> _type;
-        public PageAdmin()
+        public PageUser()
         {
             InitializeComponent();
 
             cmbFilter.SelectedValuePath = "Title";
             cmbFilter.DisplayMemberPath = "Title";
             _type = Classes.DBModel.entObj.MaterialType.ToList();
-            MaterialType def = new MaterialType 
-            { 
-                ID = 0, 
-                Title = "Фильтрация", 
-                DefectedPercent = 0 
+            MaterialType def = new MaterialType
+            {
+                ID = 0,
+                Title = "Фильтрация",
+                DefectedPercent = 0
             };
             _type.Insert(0, def);
             cmbFilter.ItemsSource = _type;
@@ -55,17 +54,12 @@ namespace odr.Pages
 
         private void menuMaterials_Click(object sender, RoutedEventArgs e)
         {
-            Classes.FrameClass.frmObj.Navigate(new PageAdmin());
+            Classes.FrameClass.frmObj.Navigate(new PageUser());
         }
 
         private void menuSuppliers_Click(object sender, RoutedEventArgs e)
         {
-            Classes.FrameClass.frmObj.Navigate(new PageAdminSuppliers());
-        }
-
-        private void menuAdd_Click(object sender, RoutedEventArgs e)
-        {
-            Classes.FrameClass.frmObj.Navigate(new PageAddMaterial());
+            Classes.FrameClass.frmObj.Navigate(new PageUserSupplier());
         }
 
         private void menuExit_Click(object sender, RoutedEventArgs e)
